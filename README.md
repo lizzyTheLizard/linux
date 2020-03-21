@@ -6,4 +6,4 @@ wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/se
 
 First get minumal ubuntu from
 
-https://help.ubuntu.com/community/Installation/MinimalCD
+https://ubuntu.com/download/desktop
