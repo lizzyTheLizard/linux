@@ -36,11 +36,8 @@ sudo gsettings set org.gnome.desktop.screensaver lock-enabled false && \
 
 
 # config
-Instll vmware extensions
-Check for no login and no lock
-Setup correct keyboard keyboard
-favorites
-setup github
-google chrome
-most recent node
-headless chrome?
+* Check for no login and no lock
+* favorites
+* setup github
+* most recent node
+* headless chrome?
