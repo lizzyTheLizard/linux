@@ -26,7 +26,7 @@ Download setting files
 wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/.bash_aliases -O ~/.bash_aliases && \ 
   wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/.vimrc -O ~/.vimrc && \
   wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/.inputrc -O ~/.inputrc 
-  wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/g3d.conf -O /etc/gdm3/custom.conf
+  sudo wget --no-cache https://raw.githubusercontent.com/lizzyTheLizard/linux/master/g3d.conf -O /etc/gdm3/custom.conf
 ```
 
 Configure gnome
