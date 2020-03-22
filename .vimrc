@@ -5,7 +5,7 @@
 :set incsearch
 :set hlsearch
 
-#Tab settings
+"Tab settings
 :set expandtab
 :set shiftwidth=2
 :set list
