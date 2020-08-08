@@ -1,4 +1,4 @@
-#!/bim/bash
+#!/bin/bash
 
 #Get user settings
 cp .bash_aliases ~/.bash_aliases
