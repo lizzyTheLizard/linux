@@ -25,6 +25,6 @@ sudo apt-get -y install \
 
 ## Setup GitHub
 [[ -f ~/.ssh/id_github ]] || ssh-keygen -t rsa -q -f ~/.ssh/id_github
-cat ~/.ssh/id_github
+cat ~/.ssh/id_github.pub
 echo "Copy this Key to GITHUUB and then execute"
 echo "git clone git@github.com:lizzyTheLizard/linux.git ~/Documents/linux && ~/Documents/linux/sync.sh"
