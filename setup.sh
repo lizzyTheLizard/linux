@@ -1,32 +1,30 @@
 #!/bin/bash
 
+# Add additgional repos
+sudo add-apt-repository ppa:mmk2410/intellij-idea-community
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+#VSCODE
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
 #Update the actual system
+sudo apt-get -y install apt-transport-https
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
-#Ensure needed software is installed
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get -y install nodejs vim git meld docker docker-compose default-jdk evince curl chromium-browser
-sudo snap install --classic code
-sudo snap install --classic intellij-idea-community
-sudo snap install postman
-sudo snap refresh
-sudo npm install -g @angular/cli
+#Install base software
+sudo apt-get -y install \
+  curl vim chromium-browser firefox \
+  git vim meld \
+  docker docker-compose default-jdk golang-1.14 nodejs \
+  intellij-idea-community
 
-#Get user settings
-cp .bash_aliases ~/.bash_aliases
-cp .vimrc ~/.vimrc
-cp .inputrc ~/.inputrc 
+## Setup GitHub
+ssh-keygen -t rsa && cat /home/magraf/.ssh/id_rsa
+echo "Copy this Key to GITHUUB and press any key"
+read
+git clone git@github.com:lizzyTheLizard/linux.git ~/Documents/linux
 
-#Configure gnome
-gsettings set org.gnome.desktop.screensaver lock-enabled false
-gsettings set org.gnome.desktop.lockdown disable-lock-screen true
-gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'intellij-idea-community_intellij-idea-community.desktop', 'postman_postman.desktop', 'code_code.desktop', 'chromium_chromium.desktop']"
-
-#Setup github
-git config --global user.name "lizzyTheLizard"
-git config --global user.email "14069652+lizzyTheLizard@users.noreply.github.com"
-
-#Allow docker without password
-sudo gpasswd -a magraf docker
-newgrp docker
+#Execute settings syn
+~/Documents/linux/sync.sh
 
