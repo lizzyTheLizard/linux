@@ -1,15 +1,19 @@
 #!/bin/bash
 
 # Add additgional repos
+echo "Add intelliJ Repo"
 sudo add-apt-repository ppa:mmk2410/intellij-idea-community
+echo "Add NodeJS Repo"
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-#VSCODE
+echo "Add VSCODE Repo"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get -y install apt-transport-https
+echo "If everything worked fine press any key to continue"
+read
 
 #Update the actual system
-sudo apt-get -y install apt-transport-https
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 #Install base software
