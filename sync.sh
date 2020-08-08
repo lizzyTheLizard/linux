@@ -4,6 +4,7 @@
 cp .bash_aliases ~/.bash_aliases
 cp .vimrc ~/.vimrc
 cp .inputrc ~/.inputrc 
+cp .profile ~/.profile
 
 #Configure gnome
 gsettings set org.gnome.desktop.screensaver lock-enabled false
