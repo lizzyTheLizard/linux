@@ -24,7 +24,7 @@ sudo apt-get -y install \
   intellij-idea-community
 
 ## Setup GitHub
-[[ -f ~/.ssh/id_github ]] || ssh-keygen -t rsa -q 
-cat /home/magraf/.ssh/id_rsa
+[[ -f ~/.ssh/id_github ]] || ssh-keygen -t rsa -q -f ~/.ssh/id_github
+cat ~/.ssh/id_github
 echo "Copy this Key to GITHUUB and then execute"
 echo "git clone git@github.com:lizzyTheLizard/linux.git ~/Documents/linux && ~/Documents/linux/sync.sh"
