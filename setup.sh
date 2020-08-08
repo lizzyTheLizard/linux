@@ -2,7 +2,7 @@
 
 # Add additgional repos
 echo "Add intelliJ Repo"
-sudo add-apt-repository ppa:mmk2410/intellij-idea-community
+sudo apt-add-repository -y ppa:mmk2410/intellij-idea
 echo "Add NodeJS Repo"
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 echo "Add VSCODE Repo"
