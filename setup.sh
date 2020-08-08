@@ -25,10 +25,5 @@ sudo apt-get -y install \
 
 ## Setup GitHub
 ssh-keygen -t rsa && cat /home/magraf/.ssh/id_rsa
-echo "Copy this Key to GITHUUB and press any key"
-read
-git clone git@github.com:lizzyTheLizard/linux.git ~/Documents/linux
-
-#Execute settings syn
-~/Documents/linux/sync.sh
-
+echo "Copy this Key to GITHUUB and then execute"
+echo "git clone git@github.com:lizzyTheLizard/linux.git ~/Documents/linux && ~/Documents/linux/sync.sh"
