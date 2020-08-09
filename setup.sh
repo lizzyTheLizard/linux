@@ -18,7 +18,8 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 sudo apt-get -y install \
   curl vim chromium-browser firefox \
   git vim meld \
-  docker docker-compose default-jdk golang-1.14 nodejs \
+  docker docker-compose \
+  default-jdk golang-1.14 nodejs python3-venv \
   intellij-idea-community code
 
 ## Setup GitHub
