@@ -10,5 +10,4 @@ Create a new VM
 Username: magraf, user autologin
 
 ## Execute symc
-curl -s https://raw.githubusercontent.com/lizzyTheLizard/linux/master/setup.sh | bash -s --
-
+rm setup.sh && wget https://raw.githubusercontent.com/lizzyTheLizard/linux/master/setup.sh -O setup.sh && sudo bash setup.sh
